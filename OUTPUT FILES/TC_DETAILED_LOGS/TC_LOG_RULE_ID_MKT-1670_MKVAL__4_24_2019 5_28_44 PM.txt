@@ -1,0 +1,265 @@
+================================++++++++++++++++++++++++++++++++++++++++++================================
+File created @5:28:44 PM on 4/24/2019
+================================++++++++++++++++++++++++++++++++++++++++++================================
+----------------------------------------------------------------------------------------------------------
+/* @62927:03 */
+--------------
+ARTT WILL EXECUTE - 	TEST CASES (4,5,6) in ENVIRONMENT (QA1) with RULE_CATEGORY (MKVAL) for RULE_ID (MKT-1670).
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC4, with MemberID ().
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             3)  Presence   of at Least 1   Refill All   DM SUPPLIES/DIABETES MANAGEMENT PLUS PRG Exists   Without Negation   In the past 12   Months   From Source All  in setting All  with Mood Event   and Status All Verify 1 Current Refill No   Timeframe Begins on CE Run Date 
+            Applicable to All (HIE; Element ID # 9761)
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             7)  Presence   of At Least 1   All   HB A1C VALUE   Lab Without Negation   and Result Value   >   8 In the past 6   Months   From Source   All   in setting   All   with intent   Event Consecutive No   Timeframe Begins on CE Run Date 
+Applicable to All (HIE; Element ID #945)
+HIE-NUMERICRESULTVALUE (Key value from input)
+CLAIM--LABTESTNUMERICRESULT
+
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620484 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620484|134852001|AUTOGEN_MEM34595300|4/24/2000|M|208978839|E|OLE66KU|MAN65LS|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620485 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620485|134852002|AUTOGEN_MEM34595301|4/24/2000|M|208978840|E|OLE66KU|MAN65LS|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+/* @62932:41 */
+--------------
+This TC will be executed using newly created member , (ID:107620484) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @62932:53 */
+--------------
+The current TC is referred to and external sheet within TC file
+----------------------------------------------------------------------------------------------------------
+/* @62933:29 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3533','ICD10CM',107620484,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3533) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @62933:38 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3542','ICD10CM',107620484,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3542) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @62933:45 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3529','ICD10CM',107620484,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3529) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @62933:63 */
+--------------
+The error (CODE:3021, DESC:Either BOF or EOF is True, or the current record has been deleted. Requested operation requires a current record.) occured in the function, FUNCTION_NAME - 'collect_and_translate_test_case_events_into_dmls'
+----------------------------------------------------------------------------------------------------------
+/* @62933:63 */
+--------------
+/* 'TC_EVENTS' used from the current test case logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @62933:89 */
+--------------
+/* 'TC_EVENTS' used from the current test case logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @62933:98 */
+--------------
+/* HIE#945#LAB~NUMERICRESULTVALUE-9#3M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTRESULTINTERIMHIE (PATIENTRESULTSKEY,MEMBERID,CAREPROVIDERID,AUTHORID,INFORMANTID,AUTHORTYPE,STAFFTYPECD,INFORMANTTYPE,DATASOURCENM,EXCLUSIONCD,INSERTEDBY,UPDATEDBY,INSERTEDDT,UPDATEDDT,REPORTEDDT,NEGATIONFLG,SECTIONTYPECD,RESULTCD,RESULTCDDESC,RESULTCDSYSTEMNM,RESULTCDSYSTEMOID,AUTHORORGID,INFORMANTORGID,RESULTDT,NUMERICRESULTVALUE) VALUES (ODS.PATIENTRESULTINTERIM_SEQ.NEXTVAL,107620484,975663,975663,975663,'P','P','P','HDMS','IN','MI-52662','MI-52662',SYSDATE,SYSDATE,SYSDATE-90,'N','11450-4','4549-2','Hemoglobin A1c/Hemoglobin.total','LOINC','2.16.840.1.113883.6.1',159063296,159063296,SYSDATE-90,'9');
+----------------------------------------------------------------------------------------------------------
+/* @62937:34 */
+--------------
+RT SOAP call was made for  Member:107620484, with Supplier:11735 Product: DM System: AA
+----------------------------------------------------------------------------------------------------------
+/* @62937:34 */
+--------------
+Member (107620484) was run successfully via CE REAL TIME web service. The service was initiated @ 24-APR-19 17.26.00.000000000 (-2 minutes), ARTT will now validate CSID tables for Test Case EVALUATION.
+----------------------------------------------------------------------------------------------------------
+/* @62937:59 */
+--------------
+TC FAILURE REASON - The expected DERIVED-FACT (12204) was NOT triggered at this run (MRR-RUNID:1482608296).
+/* DF QUERY */	select DERIVEDFACTID from csid.memberderivedfact mdf where mdf.memberrecommendrunid = 1482608296 and mdf.derivedfactid in (12204)
+----------------------------------------------------------------------------------------------------------
+/* @62937:67 */
+--------------
+
+/* DF QUERY */	select DERIVEDFACTID from csid.memberderivedfact mdf where mdf.memberrecommendrunid = 1482608296
+----------------------------------------------------------------------------------------------------------
+/* @62937:67 */
+--------------
+TC FAILURE REASON - The expected DF-ID (12204) for MF-ID (10222), of TYPE - CONDVAL(CONDVAL) is evaluated and the evaluation is NEGATIVE,  the derived facts that actually triggered are followed --> (13,149,250,251,252,4785,4797,9582,10526,11280,11505,11593).
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC5, with MemberID ().
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             4) Presence   of at Least 1   Refill All   DM SUPPLIES/DIABETES MANAGEMENT PLUS PRGExists   Without Negation   In the past 12   Months   From Source All  in setting All  with Mood Intent   and Status All Verify 1 Current Refill No   Timeframe Begins on CE Run Date 
+            Applicable to All (HIE; Element ID #9761 )
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             8) Presence of At Least 2   DIABETES COMPLICATIONS- DIABETES MANAGEMENT PLUS Diagnosis in the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #9735)
+
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620486 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620486|134852003|AUTOGEN_MEM34595302|4/24/2000|M|208978841|E|OLE46QY|MAN61XQ|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620487 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620487|134852004|AUTOGEN_MEM34595303|4/24/2000|M|208978842|E|OLE46QY|MAN61XQ|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+/* @62942:13 */
+--------------
+This TC will be executed using newly created member , (ID:107620486) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @62942:27 */
+--------------
+The current TC is referred to and external sheet within TC file
+----------------------------------------------------------------------------------------------------------
+/* @62942:85 */
+--------------
+/* HIE#1219#DIAGNOSIS#6M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTPROBLEMINTERIMHIE (PATIENTPROBLEMSKEY,MEMBERID,CAREPROVIDERID,AUTHORID,INFORMANTID,AUTHORTYPE,STAFFTYPECD,INFORMANTTYPE,DATASOURCENM,EXCLUSIONCD,INSERTEDBY,UPDATEDBY,INSERTEDDT,UPDATEDDT,REPORTEDDT,NEGATIONFLG,SECTIONTYPECD,PROBLEMCD,PROBLEMCDDESC,PROBLEMCDSYSTEMNM,PROBLEMCDSYSTEMOID,PROBLEMLEVELCD,PROBLEMTYPEMNEMONIC,EFFENDDT,EFFSTARTDT,EPISODEFLG,INFORMANTORGID,AUTHORORGID) VALUES (ODS.PATIENTPROBLEMINTERIM_SEQ.NEXTVAL,107620486,975663,975663,975663,'P','P','P','HDMS','IN','MI-52662','MI-52662',SYSDATE,SYSDATE,SYSDATE-182,'N','11450-4','E13.22','OTH SPEC DIABETES MELLITUS DIAB CHRON KIDNEY DZ','ICD10CM','2.16.840.1.113883.6.90','P','PROBTYP_282291009',Null,SYSDATE-182,'N',159456983,159456983);
+----------------------------------------------------------------------------------------------------------
+/* @62943 */
+--------------
+The error (CODE:3021, DESC:Either BOF or EOF is True, or the current record has been deleted. Requested operation requires a current record.) occured in the function, FUNCTION_NAME - 'collect_and_translate_test_case_events_into_dmls'
+----------------------------------------------------------------------------------------------------------
+/* @62943 */
+--------------
+/* 'TC_EVENTS' used from the current test case logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @62943:16 */
+--------------
+/* 'TC_EVENTS' used from the current test case logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @62943:23 */
+--------------
+/* CLAIM#9735#DIAGNOSIS#9M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'31361000138118','SNOMED',107620486,SYSDATE-274,SYSDATE-274,SYSDATE-274,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'SNOMED code (31361000138118) from DIAGNOSIS ELEMENT: 9735');
+----------------------------------------------------------------------------------------------------------
+/* @62943:39 */
+--------------
+/* 'TC_EVENTS' used from the current test case logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @62943:48 */
+--------------
+/* CLAIM#9735#DIAGNOSIS#7M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'30891000138110','SNOMED',107620486,SYSDATE-212,SYSDATE-212,SYSDATE-212,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'SNOMED code (30891000138110) from DIAGNOSIS ELEMENT: 9735');
+----------------------------------------------------------------------------------------------------------
+/* @62945:94 */
+--------------
+RT SOAP call was made and response was NOT successful, for  Member:107620486, with Supplier:11735 Product: DM System: AA
+----------------------------------------------------------------------------------------------------------
+/* @62945:94 */
+--------------
+Member (107620486) was NOT run successfully via CE REAL TIME web service. Hence ARTT will NOT validate CSID tables for Test Case EVALUATION.
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC6, with MemberID ().
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             5)  Presence of At Least 1 Refill   DM SUPPLIES/DIABETES MANAGEMENT PLUS PRGExists In the past 12 Months Verify 1 Current Refill No Timeframe Begins on CE Run Date (Claims; Element ID #9761 )
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             9)  Presence   of at Least 1   All   DIABETES COMPLICATIONS- DIABETES MANAGEMENT PLUS Diagnosis   Without Negation   in the past 12   Months From source All   with setting All   and Type   All Use response   Any   Timeframe Begins on CE Run Date  Applicable to All (HIE; Element ID #9735)
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620488 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620488|134852005|AUTOGEN_MEM34595304|4/24/2000|M|208978843|E|OLE16AL|MAN89JM|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620489 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620489|134852006|AUTOGEN_MEM34595305|4/24/2000|M|208978844|E|OLE16AL|MAN89JM|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+/* @62950:46 */
+--------------
+This TC will be executed using newly created member , (ID:107620488) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @62950:59 */
+--------------
+The current TC is referred to and external sheet within TC file
+----------------------------------------------------------------------------------------------------------
+/* @62951:18 */
+--------------
+/* HIE#1219#DIAGNOSIS#6M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTPROBLEMINTERIMHIE (PATIENTPROBLEMSKEY,MEMBERID,CAREPROVIDERID,AUTHORID,INFORMANTID,AUTHORTYPE,STAFFTYPECD,INFORMANTTYPE,DATASOURCENM,EXCLUSIONCD,INSERTEDBY,UPDATEDBY,INSERTEDDT,UPDATEDDT,REPORTEDDT,NEGATIONFLG,SECTIONTYPECD,PROBLEMCD,PROBLEMCDDESC,PROBLEMCDSYSTEMNM,PROBLEMCDSYSTEMOID,PROBLEMLEVELCD,PROBLEMTYPEMNEMONIC,EFFENDDT,EFFSTARTDT,EPISODEFLG,INFORMANTORGID,AUTHORORGID) VALUES (ODS.PATIENTPROBLEMINTERIM_SEQ.NEXTVAL,107620488,975663,975663,975663,'P','P','P','HDMS','IN','MI-52662','MI-52662',SYSDATE,SYSDATE,SYSDATE-182,'N','11450-4','E13.3551','OTHER SPECIFIED DIABETES MELLITUS STABLE PDR OD','ICD10CM','2.16.840.1.113883.6.90','P','PROBTYP_282291009',Null,SYSDATE-182,'N',159456983,159456983);
+----------------------------------------------------------------------------------------------------------
+/* @62951:33 */
+--------------
+The error (CODE:3021, DESC:Either BOF or EOF is True, or the current record has been deleted. Requested operation requires a current record.) occured in the function, FUNCTION_NAME - 'collect_and_translate_test_case_events_into_dmls'
+----------------------------------------------------------------------------------------------------------
+/* @62951:33 */
+--------------
+/* 'TC_EVENTS' used from the current test case logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @62951:67 */
+--------------
+/* 'TC_EVENTS' used from the current test case logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @62951:75 */
+--------------
+/* HIE#9735#DIAGNOSIS#9M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTPROBLEMINTERIMHIE (PATIENTPROBLEMSKEY,MEMBERID,CAREPROVIDERID,AUTHORID,INFORMANTID,AUTHORTYPE,STAFFTYPECD,INFORMANTTYPE,DATASOURCENM,EXCLUSIONCD,INSERTEDBY,UPDATEDBY,INSERTEDDT,UPDATEDDT,REPORTEDDT,NEGATIONFLG,SECTIONTYPECD,PROBLEMCD,PROBLEMCDDESC,PROBLEMCDSYSTEMNM,PROBLEMCDSYSTEMOID,PROBLEMLEVELCD,PROBLEMTYPEMNEMONIC,EFFENDDT,EFFSTARTDT,EPISODEFLG,INFORMANTORGID,AUTHORORGID) VALUES (ODS.PATIENTPROBLEMINTERIM_SEQ.NEXTVAL,107620488,975663,975663,975663,'P','P','P','HDMS','IN','MI-52662','MI-52662',SYSDATE,SYSDATE,SYSDATE-274,'N','11450-4','346701000138121','Neurologic disorder associated with type II DM','SNOMED','2.16.840.1.113883.6.96','P','PROBTYP_282291009',Null,SYSDATE-274,'N',159456983,159456983);
+----------------------------------------------------------------------------------------------------------
+/* @62954:34 */
+--------------
+RT SOAP call was made and response was NOT successful, for  Member:107620488, with Supplier:11735 Product: DM System: AA
+----------------------------------------------------------------------------------------------------------
+/* @62954:34 */
+--------------
+Member (107620488) was NOT run successfully via CE REAL TIME web service. Hence ARTT will NOT validate CSID tables for Test Case EVALUATION.
+MemberID (107620488) is not logged in TDM.TDMMEMBER table
+MemberID (107620489) is not logged in TDM.TDMMEMBER table
+==============================================================================================================================================
+				END of TEST CASE: TC6, MEMBERID (107620488).
+==============================================================================================================================================

@@ -1,0 +1,120 @@
+================================++++++++++++++++++++++++++++++++++++++++++================================
+File created @1:07:28 PM on 4/26/2019
+================================++++++++++++++++++++++++++++++++++++++++++================================
+Creating new member, #1
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620578 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620578|134852095|AUTOGEN_MEM34595394|4/26/1997|M|208978933|E|OLE58IS|MAN57JP|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620579 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620579|134852096|AUTOGEN_MEM34595395|4/26/1997|M|208978934|E|OLE58IS|MAN57JP|
+----------------------------------------------------------------------------------------------------------
+Creating new member, #2
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620580 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620580|134852097|AUTOGEN_MEM34595396|4/26/1997|M|208978935|E|OLE13AU|MAN56BM|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620581 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620581|134852098|AUTOGEN_MEM34595397|4/26/1997|M|208978936|E|OLE13AU|MAN56BM|
+----------------------------------------------------------------------------------------------------------
+Creating new member, #3
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620582 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620582|134852099|AUTOGEN_MEM34595398|4/26/1997|M|208978937|E|OLE71IR|MAN45MZ|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620583 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620583|134852100|AUTOGEN_MEM34595399|4/26/1997|M|208978938|E|OLE71IR|MAN45MZ|
+----------------------------------------------------------------------------------------------------------
+Creating new member, #4
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620584 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620584|134852101|AUTOGEN_MEM34595400|4/26/1997|M|208978939|E|OLE36EN|MAN52XI|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620585 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620585|134852102|AUTOGEN_MEM34595401|4/26/1997|M|208978940|E|OLE36EN|MAN52XI|
+----------------------------------------------------------------------------------------------------------
+Creating new member, #5
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620606 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620606|134852123|AUTOGEN_MEM34595402|4/26/1997|M|208978981|E|OLE26CI|MAN45RC|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620607 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620607|134852124|AUTOGEN_MEM34595403|4/26/1997|M|208978982|E|OLE26CI|MAN45RC|
+----------------------------------------------------------------------------------------------------------
+Creating new member, #6
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620608 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620608|134852125|AUTOGEN_MEM34595404|4/26/1997|M|208978983|E|OLE13FD|MAN72ZJ|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620609 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620609|134852126|AUTOGEN_MEM34595405|4/26/1997|M|208978984|E|OLE13FD|MAN72ZJ|
+----------------------------------------------------------------------------------------------------------
+Creating new member, #7
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620610 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620610|134852127|AUTOGEN_MEM34595406|4/26/1997|M|208978985|E|OLE75PK|MAN11FF|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620611 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620611|134852128|AUTOGEN_MEM34595407|4/26/1997|M|208978986|E|OLE75PK|MAN11FF|
+----------------------------------------------------------------------------------------------------------
+Creating new member, #8
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620612 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620612|134852129|AUTOGEN_MEM34595408|4/26/1997|M|208978987|E|OLE38AX|MAN12QW|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620613 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620613|134852130|AUTOGEN_MEM34595409|4/26/1997|M|208978988|E|OLE38AX|MAN12QW|
+----------------------------------------------------------------------------------------------------------
+Creating new member, #9
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620614 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620614|134852131|AUTOGEN_MEM34595410|4/26/1997|M|208978989|E|OLE92ZA|MAN88JQ|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620615 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620615|134852132|AUTOGEN_MEM34595411|4/26/1997|M|208978990|E|OLE92ZA|MAN88JQ|
+----------------------------------------------------------------------------------------------------------

@@ -1,0 +1,108 @@
+================================++++++++++++++++++++++++++++++++++++++++++================================
+File created @6:09:39 PM on 4/24/2019
+================================++++++++++++++++++++++++++++++++++++++++++================================
+----------------------------------------------------------------------------------------------------------
+/* @65381:69 */
+--------------
+ARTT WILL EXECUTE - 	TEST CASES (2) in ENVIRONMENT (QA1) with RULE_CATEGORY (MKVAL) for RULE_ID (MKT-1670).
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID ().
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+REGULAR MEMBER ( 107620496 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+11735|107620496|134852013|AUTOGEN_MEM34595312|4/24/2000|M|208978851|E|OLE54GR|MAN53HO|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+AGGREGATE MEMBER ( 107620497 ) is successfully created, member details listed below.
+----------------------------------------------------------------------------------------------------------
+SUPPLIERID|MEMBERID|MEMBERPLANID|SOURCEPATIENTID|DTOFBIRTH|GENDER|PERSONID|MEMBERTYPECODE|FIRSTNAME|LASTNAME|
+14463|107620497|134852014|AUTOGEN_MEM34595313|4/24/2000|M|208978852|E|OLE54GR|MAN53HO|
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+/* @65387:58 */
+--------------
+This TC will be executed using newly created member , (ID:107620496) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @65387:73 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @65388:53 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.35','ICD10CM',107620496,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.35) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @65388:61 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.41','ICD10CM',107620496,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.41) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @65388:98 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3522','ICD10CM',107620496,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3522) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @65389:07 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'A4259','HCPCS',107620496,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (A4259) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @65389:2 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'4549-2','LOINC',107620496,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (4549-2) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @65392:07 */
+--------------
+RT SOAP call was made for  Member:107620496, with Supplier:11735 Product: DM System: AA
+----------------------------------------------------------------------------------------------------------
+/* @65392:07 */
+--------------
+Member (107620496) was run successfully via CE REAL TIME web service. The service was initiated @ 24-APR-19 18.07.00.000000000 (-2 minutes), ARTT will now validate CSID tables for Test Case EVALUATION.
+----------------------------------------------------------------------------------------------------------
+/* @65392:34 */
+--------------
+The expected DERIVED-FACT (12204) was triggered at this run (MRR-RUNID:1482609303).
+/* DF QUERY */	select DERIVEDFACTID from csid.memberderivedfact mdf where mdf.memberrecommendrunid = 1482609303 and mdf.derivedfactid in (12204)
+----------------------------------------------------------------------------------------------------------
+/* @65392:34 */
+--------------
+Since he expected DF-ID (12204) for MF-ID (10222), of TYPE - CONDVAL is evaluated SUCCESSFULLY , additional validations may follow.
+----------------------------------------------------------------------------------------------------------
+/* @65392:62 */
+--------------
+MHS - The CSID validation PASSED since the corresponding STATECOMPONENT-ID (1670) for the given MEDICAL-FINDINGID/DERIVED-FACTID (12204) has triggered at this run (RUN-ID:1482609303).
+/* The following query was run for MHS validation. */
+----------------------------------------------------------------------------------------------------------
+/* @65392:62 */
+--------------
+select  mrr.memberid,mrr.memberrecommendrunid,mhs.memberhealthstateskey mhs_skey,cerma.careenginerunmemberactionid actionid,cerma.productmnemoniccd program_name,cerma.recommendflg,cerma.programreferralintensitycd program_intensity, mhs.statecomponentid,cerma.overallscorenbr,mhs.severitylevel mhs_severity,mhs.healthstatestatuscd mhs_status,mhs.healthstatestatuschangedt mhs_status_change_dt,cerma.recordinsertdt action_creation_dt, cerma.recordupdtdt action_update_dt,mhs.lastevaluationdt mhs_last_eval_dt from csid.memberrecommendrun mrr, csid.careenginerunmemberaction cerma, csid.memberhealthstateactionxref actxref, csid.memberhealthstate mhs where cerma.careenginerunmemberactionid = actxref.careenginerunmemberactionid and actxref.memberhealthstateskey=mhs.memberhealthstateskey and mrr.memberrecommendrunid = cerma.memberrecommendrunid and mrr.memberrecommendrunid in (1482609303)and mhs.statecomponentid in (1670)and mhs.yearqtr = '20192' and cerma.productmnemoniccd In ('DM')
+----------------------------------------------------------------------------------------------------------
+/* @65392:62 */
+--------------
+MEMBERID|MEMBERRECOMMENDRUNID|MHS_SKEY|ACTIONID|PROGRAM_NAME|RECOMMENDFLG|PROGRAM_INTENSITY|STATECOMPONENTID|OVERALLSCORENBR|MHS_SEVERITY|MHS_STATUS|MHS_STATUS_CHANGE_DT|ACTION_CREATION_DT|ACTION_UPDATE_DT|MHS_LAST_EVAL_DT|
+107620496|1482609303|246318078150|14051393372|DM|Y||1670|6.31||CURR|4/24/2019 6:09:59 PM|4/24/2019 6:09:51 PM|4/24/2019 6:09:51 PM|4/24/2019 6:09:59 PM|
+
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620496).
+==============================================================================================================================================

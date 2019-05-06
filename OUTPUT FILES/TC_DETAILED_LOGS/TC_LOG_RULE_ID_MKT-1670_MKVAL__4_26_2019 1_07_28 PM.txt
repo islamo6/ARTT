@@ -1,0 +1,556 @@
+================================++++++++++++++++++++++++++++++++++++++++++================================
+File created @1:07:28 PM on 4/26/2019
+================================++++++++++++++++++++++++++++++++++++++++++================================
+----------------------------------------------------------------------------------------------------------
+/* @47255:36 */
+--------------
+ARTT will execute TCs (range):2 with MEMBERSET1 needing 9 new members which is created by ARTT.
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID (107620578).
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+/* @47296:95 */
+--------------
+This TC will be executed using existing Member, provided in TC/TD, (ID:107620578) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @47297:47 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @47298:21 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3533','ICD10CM',107620578,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3533) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47298:29 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.4','ICD10CM',107620578,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.4) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47298:37 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.44','ICD10CM',107620578,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.44) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47298:46 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'A4259','HCPCS',107620578,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (A4259) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @47298:55 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'62388-4','LOINC',107620578,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (62388-4) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @47298:63 */
+--------------
+MEMBER is not set to RUN real time as the flag (RUN_CE) in driver script is set to 'False'.
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620578).
+==============================================================================================================================================
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID (107620580).
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+/* @47299:29 */
+--------------
+This TC will be executed using existing Member, provided in TC/TD, (ID:107620580) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @47299:83 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @47300:57 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3533','ICD10CM',107620580,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3533) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47300:67 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3492','ICD10CM',107620580,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3492) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47300:73 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.32','ICD10CM',107620580,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.32) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47300:82 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'A4259','HCPCS',107620580,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (A4259) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @47300:92 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'4548-4','LOINC',107620580,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (4548-4) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @47301:04 */
+--------------
+MEMBER is not set to RUN real time as the flag (RUN_CE) in driver script is set to 'False'.
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620580).
+==============================================================================================================================================
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID (107620582).
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+/* @47301:32 */
+--------------
+This TC will be executed using existing Member, provided in TC/TD, (ID:107620582) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @47301:84 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @47302:58 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3492','ICD10CM',107620582,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3492) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47302:66 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.352','ICD10CM',107620582,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.352) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47302:74 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.31','ICD10CM',107620582,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.31) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47302:82 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'A4259','HCPCS',107620582,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (A4259) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @47302:89 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'55454-3','LOINC',107620582,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (55454-3) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @47303:01 */
+--------------
+MEMBER is not set to RUN real time as the flag (RUN_CE) in driver script is set to 'False'.
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620582).
+==============================================================================================================================================
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID (107620584).
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+/* @47303:27 */
+--------------
+This TC will be executed using existing Member, provided in TC/TD, (ID:107620584) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @47303:8 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @47304:53 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3219','ICD10CM',107620584,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3219) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47304:6 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3532','ICD10CM',107620584,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3532) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47304:68 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3','ICD10CM',107620584,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47304:77 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'A4253','HCPCS',107620584,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (A4253) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @47304:84 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'59261-8','LOINC',107620584,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (59261-8) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @47304:94 */
+--------------
+MEMBER is not set to RUN real time as the flag (RUN_CE) in driver script is set to 'False'.
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620584).
+==============================================================================================================================================
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID (107620606).
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+/* @47305:25 */
+--------------
+This TC will be executed using existing Member, provided in TC/TD, (ID:107620606) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @47305:76 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @47306:53 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.37','ICD10CM',107620606,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.37) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47306:62 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3399','ICD10CM',107620606,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3399) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47306:7 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3552','ICD10CM',107620606,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3552) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47306:78 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'E0607','HCPCS',107620606,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (E0607) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @47306:86 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'62388-4','LOINC',107620606,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (62388-4) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @47306:95 */
+--------------
+MEMBER is not set to RUN real time as the flag (RUN_CE) in driver script is set to 'False'.
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620606).
+==============================================================================================================================================
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID (107620608).
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+/* @47307:23 */
+--------------
+This TC will be executed using existing Member, provided in TC/TD, (ID:107620608) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @47307:76 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @47308:5 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.351','ICD10CM',107620608,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.351) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47308:59 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.31','ICD10CM',107620608,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.31) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47308:66 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.36','ICD10CM',107620608,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.36) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47308:75 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'A4253','HCPCS',107620608,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (A4253) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @47308:82 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'4549-2','LOINC',107620608,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (4549-2) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @47308:9 */
+--------------
+MEMBER is not set to RUN real time as the flag (RUN_CE) in driver script is set to 'False'.
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620608).
+==============================================================================================================================================
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID (107620610).
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+/* @47309:2 */
+--------------
+This TC will be executed using existing Member, provided in TC/TD, (ID:107620610) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @47309:75 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @47310:49 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3211','ICD10CM',107620610,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3211) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47310:57 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3392','ICD10CM',107620610,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3392) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47310:64 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3523','ICD10CM',107620610,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3523) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47310:72 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'A4253','HCPCS',107620610,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (A4253) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @47310:81 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'71875-9','LOINC',107620610,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (71875-9) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @47310:89 */
+--------------
+MEMBER is not set to RUN real time as the flag (RUN_CE) in driver script is set to 'False'.
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620610).
+==============================================================================================================================================
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID (107620612).
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+/* @47311:17 */
+--------------
+This TC will be executed using existing Member, provided in TC/TD, (ID:107620612) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @47311:69 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @47312:41 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.32','ICD10CM',107620612,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.32) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47312:5 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3591','ICD10CM',107620612,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3591) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47312:57 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3412','ICD10CM',107620612,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3412) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47312:66 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'A4259','HCPCS',107620612,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (A4259) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @47312:75 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'62388-4','LOINC',107620612,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (62388-4) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @47312:84 */
+--------------
+MEMBER is not set to RUN real time as the flag (RUN_CE) in driver script is set to 'False'.
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620612).
+==============================================================================================================================================
+==============================================================================================================================================
+				BEGINNING of TEST CASE: TC2, with MemberID (107620614).
+==============================================================================================================================================
+			TC DESCRIPTION (Copied from Input Excel for this test case)
+			--------------------------------------------------------------
+RULE TYPE/ID: MK-1670 (Diabetes Management Plus)
+RULE CATEGORY: CONDVAL-10222
+CONDVAL_TITLE :Diabetes Management Plus
+CONDVAL_PATH : Rma Project / Business Library / Condition / Condition Validation / Diabetes Management Plus
+
+All of the following:
+1.  Age >/=18 
+2.  Diabetes Adult validation is confirmed
+3. One of the following: 
+a. N/A
+b.  All of the following:
+      i.  One of the following:
+             1).  Presence of At Least 1   DM TESTING SUPPLIES (HCPCS) Procedure In the past 12 Months Timeframe Between Claims No Timeframe Begins on CE Run Date (Claims; Element ID #6165)     
+
+     ii.   One of the Following Expressions is correct: Comorbidities:
+             5)  Presence of At Least 1   HB A1C VALUE  with source as Lab  Data  Result Value > 8 In the past 6 Months Timeframe Between Events No     Consecutive No Timeframe Begins on CE Run Date (Claims; Element ID #945)
+----------------------------------------------------------------------------------------------------------
+/* @47313:13 */
+--------------
+This TC will be executed using existing Member, provided in TC/TD, (ID:107620614) for supplier (ID:11735) in (QA1) environment.
+----------------------------------------------------------------------------------------------------------
+/* @47313:63 */
+--------------
+/* 'TC_EVENTS' used from the current test case (TC2) logged below. */
+----------------------------------------------------------------------------------------------------------
+/* @47314:36 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3541','ICD10CM',107620614,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3541) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47314:45 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#5M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.39','ICD10CM',107620614,SYSDATE-151,SYSDATE-151,SYSDATE-151,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.39) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47314:53 */
+--------------
+/* CLAIM#1219#DIAGNOSIS#1M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALDIAGNOSIS (MEDICALDIAGINSTANCEID,MEDICALDIAGNOSISCODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientdiag_seq.nextval,'E13.3519','ICD10CM',107620614,SYSDATE-31,SYSDATE-31,SYSDATE-31,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'ICD10CM code (E13.3519) from DIAGNOSIS ELEMENT: 1219');
+----------------------------------------------------------------------------------------------------------
+/* @47314:62 */
+--------------
+/* CLAIM#6165#PROCEDURE#8M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTMEDICALPROCEDURE (MEDICALPROCINSTANCEID,MEDICALPROCEDURECODE,CODESETTYPE,MEMBERID,SERVICEDT,PAIDDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS) VALUES (ods.ods_patientproc_seq.nextval,'A4232','HCPCS',107620614,SYSDATE-243,SYSDATE-243,SYSDATE-243,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'HCPCS code (A4232) from PROCEDURE ELEMENT: 6165');
+----------------------------------------------------------------------------------------------------------
+/* @47314:7 */
+--------------
+/* CLAIM#945#LAB~LABTESTNUMERICRESULT-9#4M - DML is successully executed and data is inserted in DB */
+INSERT INTO ODS.PATIENTLABRESULT (LABRESULTINSTANCEID,LOINC,CODESETTYPE,MEMBERID,SERVICEDT,RECVDDT,RECORDINSERTDT,RECORDUPDTDT,INSERTEDBY,UPDTDBY,EXCLUSIONFLAG,BATCHID,COMMENTS,LABTESTNUMERICRESULT) VALUES (ods.ods_patientlab_seq.nextval,'59261-8','LOINC',107620614,SYSDATE-121,SYSDATE-121,SYSDATE,SYSDATE,'MI-52662','MI-52662','IN',1,'LOINC code (59261-8) from LAB ELEMENT: 945','9');
+----------------------------------------------------------------------------------------------------------
+/* @47314:78 */
+--------------
+MEMBER is not set to RUN real time as the flag (RUN_CE) in driver script is set to 'False'.
+==============================================================================================================================================
+				END of TEST CASE: TC2, MEMBERID (107620614).
+==============================================================================================================================================
